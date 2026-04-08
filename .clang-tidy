@@ -1,0 +1,135 @@
+Checks: >
+        -*,
+        clang-diagnostic-*,
+        clang-analyzer-optin.*,
+        llvm-*,-llvm-header-guard,
+        google-*,-google-readability-todo,-google-readability-braces-around-statements,
+        hicpp-*,-hicpp-braces-around-statements,-hicpp-use-emplace,-hicpp-named-parameter,
+          -hicpp-no-array-decay,-hicpp-uppercase-literal-suffix,
+        misc-*,-misc-include-cleaner,-misc-no-recursion,
+        bugprone-*,
+        boost-*,
+        cert-*,-cert-dcl16-c,-cert-dcl51-cpp,-cert-dcl37-c,
+        concurrency-*,
+        cppcoreguidelines-*,-cppcoreguidelines-avoid-magic-numbers,
+        modernize-*,-modernize-use-trailing-return-type,-modernize-use-emplace,
+        performance-*,-performance-noexcept-move-constructor,
+        portability-*,
+        readability-*,-readability-redundant-access-specifiers
+
+CheckOptions:
+  - key:             readability-identifier-length.IgnoredVariableNames
+    value:           '^(id|it)$'
+  - key:             readability-identifier-naming.AbstractClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ClassConstantCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.ClassMemberCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ClassMethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ConstantCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ConstantMemberCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ConstantParameterCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ConstantPointerParameterCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ConstexprFunctionCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ConstexprMethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ConstexprVariableCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.EnumCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.EnumConstantCase
+    value:           camelBack
+  - key:             readability-identifier-naming.FunctionCase
+    value:           camelBack
+  - key:             readability-identifier-naming.GetConfigPerFile
+    value:           true
+  - key:             readability-identifier-naming.GlobalConstantCase
+    value:           lower_case
+  - key:             readability-identifier-naming.GlobalConstantPointerCase
+    value:           camelBack
+  - key:             readability-identifier-naming.GlobalFunctionCase
+    value:           camelBack
+  - key:             readability-identifier-naming.GlobalFunctionIgnoredRegexp
+    value:           '^TEST$'
+  - key:             readability-identifier-naming.GlobalPointerCase
+    value:           lower_case
+  - key:             readability-identifier-naming.GlobalVariableCase
+    value:           lower_case
+  - key:             readability-identifier-naming.IgnoreMainLikeFunctions
+    value:           1
+  - key:             readability-identifier-naming.InlineNamespaceCase
+    value:           lower_case
+  - key:             readability-identifier-naming.LocalConstantCase
+    value:           lower_case
+  - key:             readability-identifier-naming.LocalConstantPointerCase
+    value:           lower_case
+  - key:             readability-identifier-naming.LocalPointerCase
+    value:           lower_case
+  - key:             readability-identifier-naming.LocalVariableCase
+    value:           lower_case
+  - key:             readability-identifier-naming.MacroDefinitionCase
+    value:           UPPER_CASE
+  - key:             readability-identifier-naming.MemberCase
+    value:           lower_case
+  - key:             readability-identifier-naming.MethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.NamespaceCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ParameterCase
+    value:           lower_case
+  - key:             readability-identifier-naming.ParameterPackCase
+    value:           lower_case
+  - key:             readability-identifier-naming.PointerParameterCase
+    value:           lower_case
+  - key:             readability-identifier-naming.PrivateMemberCase
+    value:           lower_case
+  - key:             readability-identifier-naming.PrivateMemberSuffix
+    value:           _
+  - key:             readability-identifier-naming.PrivateMethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ProtectedMemberCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ProtectedMethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.PublicMemberCase
+    value:           camelBack
+  - key:             readability-identifier-naming.PublicMethodCase
+    value:           camelBack
+  - key:             readability-identifier-naming.ScopedEnumConstantCase
+    value:           camelBack
+  - key:             readability-identifier-naming.StaticConstantCase
+    value:           lower_case
+  - key:             readability-identifier-naming.StaticVariableCase
+    value:           lower_case
+  - key:             readability-identifier-naming.StructCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TemplateParameterCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TemplateTemplateParameterCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TypeAliasCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TypedefCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.TypeTemplateParameterCase
+    value:           CamelCase
+# fix for clang-tidy v11, v12 and v14 when compiling with C++20
+  - key:             readability-identifier-naming.TypeTemplateParameterIgnoredRegexp
+    value:           'expr-type'
+  - key:             readability-identifier-naming.UnionCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ValueTemplateParameterCase
+    value:           camelBack
+  - key:             readability-identifier-naming.VariableCase
+    value:           lower_case
+  - key:             readability-identifier-naming.VirtualMethodCase
+    value:           camelBack

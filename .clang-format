@@ -1,0 +1,12 @@
+BasedOnStyle: WebKit
+QualifierAlignment: 'Custom'
+QualifierOrder: [
+  'friend',
+  'static',
+  'constexpr',
+  'inline',
+  'volatile',
+  'restrict',
+  'const',
+  'type',
+]

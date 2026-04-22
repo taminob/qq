@@ -2,7 +2,7 @@ Checks: >
         -*,
         clang-diagnostic-*,
         clang-analyzer-optin.*,
-        llvm-*,-llvm-header-guard,
+        llvm-*,-llvm-header-guard,-llvm-qualified-auto,
         google-*,-google-readability-todo,-google-readability-braces-around-statements,
         hicpp-*,-hicpp-braces-around-statements,-hicpp-use-emplace,-hicpp-named-parameter,
           -hicpp-no-array-decay,-hicpp-uppercase-literal-suffix,

@@ -19,7 +19,9 @@ Checks: >
 
 CheckOptions:
   - key:             readability-identifier-length.IgnoredVariableNames
-    value:           '^(id|it)$'
+    value:           '^(id|it|ui|in)$'
+  - key:             readability-identifier-length.IgnoredParameterNames
+    value:           '^(id|it|ui|in)$'
   - key:             readability-identifier-naming.AbstractClassCase
     value:           CamelCase
   - key:             readability-identifier-naming.ClassCase
